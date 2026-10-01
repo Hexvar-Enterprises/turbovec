@@ -68,3 +68,9 @@ and usually by whoever has the least context.
 The asymmetry is the whole argument: `--ff-only` fails loudly and costs one
 command to recover from. A merge commit on a trunk is silent, and costs a
 reconciliation nobody scheduled.
+
+---
+
+# RULE: NO BRANCH IS LEFT HANGING
+
+Operator directive, 2026-10-01: when a PR merges or an agent finishes, the controller closes out its branch. A merged branch gets deleted, with proof first. Partial work gets reviewed, and complete work with no PR gets a PR or a sub-agent to finish it. Nothing is deleted unreviewed. The full rule, covering classification, proof of merge, and what to do when deletion is blocked, is in [`.claude/rules/git-hygiene.md`](.claude/rules/git-hygiene.md).
